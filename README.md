@@ -1,8 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
+## Getting Started - TATINTA V2
 
 First, run the development server:
+
+use nextJS 14 + Node 18.17.0
 
 ```bash
 npm run dev
