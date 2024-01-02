@@ -9,6 +9,8 @@ use nextJS 14 + Node 18.17.0
 ==> yarn dev
 ```
 
+Make sure that everyone in your team has the Prettier extension installed in Visual Studio Code. You can install it from the Extensions view in VSCode.
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.

@@ -1,19 +1,26 @@
-'use client';
+"use client";
 
-import { useRouter, usePathname } from '@/navigation';
+import { useLocalStorage } from "@/hooks";
+import { useRouter, usePathname } from "@/navigation";
 
 export default function LanguageChanger({ locale }) {
-    const router = useRouter();
-    const pathname = usePathname();
+	const router = useRouter();
+	const pathname = usePathname();
+	const [storedValue, setValue] = useLocalStorage("Lang");
 
-    const handleChange = e => {
-        router.push(pathname, { locale: e.target.value });
-    };
+	const handleChange = (e) => {
+		router.push(pathname, { locale: e.target.value });
+		setValue(e.target.value);
+	};
 
-    return (
-        <select value={locale} onChange={handleChange}>
-            <option value="en">English</option>
-            <option value="vi">VietNamese</option>
-        </select>
-    );
+	return (
+		<select
+			value={storedValue || "vi"}
+			onChange={handleChange}
+			className='bg-transparent text-white'
+		>
+			<option value='en'>English</option>
+			<option value='vi'>VietNamese</option>
+		</select>
+	);
 }
