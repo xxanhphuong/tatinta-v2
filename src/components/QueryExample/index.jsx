@@ -9,6 +9,7 @@ export default function QueryExample() {
     const { data, error, isFetching } = useQuery({
         queryKey: ["weathers"],
         queryFn: getWeather,
+        refetchOnWindowFocus: false,
     });
 
     const t = useTranslations();
