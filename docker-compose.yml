@@ -1,0 +1,13 @@
+version: "3"
+services:
+    tatinta-frontend:
+        container_name: tatinta-frontend-web
+        image: tatinta-v2
+        build:
+            context: .
+        ports:
+            - "2000:2000"
+        volumes:
+            - .:/app
+            - /app/node_modules
+            - /app/.next
