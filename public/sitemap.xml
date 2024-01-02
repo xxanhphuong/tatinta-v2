@@ -1,4 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap><loc>http://localhost:3000/sitemap-0.xml</loc></sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><loc>http://localhost:3000/[locale]</loc><lastmod>2024-01-02T16:52:43.454Z </lastmod> <changefreq>weekly</changefreq><priority>1.0</priority><loc>http://localhost:3000/global-error</loc><lastmod>2024-01-02T16:52:43.454Z </lastmod> <changefreq>weekly</changefreq><priority>1.0</priority></urlset > 
