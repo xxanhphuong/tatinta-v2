@@ -5,7 +5,8 @@ import { Inter } from 'next/font/google'
 import Provider from "@/utils/Provider";
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { locales } from '@/config/localeConfig';
-import { NextIntlClientProvider } from 'next-intl'
+import { NextIntlClientProvider } from 'next-intl';
+import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] })
 
 export function generateStaticParams() {
@@ -50,6 +51,7 @@ async function RootLayout({ children, params: { locale }
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     <Provider>
                         {children}
+                        <Analytics />
                     </Provider>
                 </NextIntlClientProvider>
             </body>
