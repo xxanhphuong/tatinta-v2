@@ -1,0 +1,10 @@
+{
+    "common":{
+        "site_name": "Tatinta VI Tatinta Locale Client side",
+        "variable-example": "Su dung variable {{count}}",
+        "example_locale_server_side": "Ví dụ locale server side - VI"
+    },
+    "LocaleLayout": {
+        "title": "Tatinta Vi"
+    }
+}
