@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap",
-    "postinstall": "yarn prisma generate"
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@remix-run/react": "^2.4.1",
