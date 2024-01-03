@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head";
+import Script from "next/script";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import Provider from "@/utils/Provider";
@@ -7,6 +7,8 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { locales } from "@/config/localeConfig";
 import { NextIntlClientProvider } from "next-intl";
 import { Analytics } from "@vercel/analytics/react";
+import BotsonicWidget from "@/components/BotsonicWidget";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export function generateStaticParams() {
@@ -42,6 +44,7 @@ async function RootLayout({ children, params: { locale } }) {
 	}
 
 	unstable_setRequestLocale(locale);
+
 	return (
 		<html lang={locale}>
 			<body className={inter.className}>
@@ -51,6 +54,7 @@ async function RootLayout({ children, params: { locale } }) {
 						{/* <Analytics /> */}
 					</Provider>
 				</NextIntlClientProvider>
+				<BotsonicWidget />
 			</body>
 		</html>
 	);
