@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 
 export default function QueryExample() {
 	// const t = useTranslations('common');
-	const { data, error, isFetching } = useQuery({
+	const { data, error, isFetching, refetch } = useQuery({
 		queryKey: ["weathers"],
 		queryFn: getWeather,
 		refetchOnWindowFocus: false,
@@ -31,6 +31,7 @@ export default function QueryExample() {
 				<p className='w-[80vw] h-[100px] min-h-[100px] overflow-auto'>
 					{JSON.stringify(data)}
 				</p>
+				<button onClick={refetch}>Refresh</button>
 			</div>
 		);
 	}
